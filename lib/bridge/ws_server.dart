@@ -14,8 +14,6 @@ class BridgeWsServer {
   Timer? _retryTimer;
   var _stopping = false;
 
-  bool get isListening => _server != null;
-
   Future<void> start() async {
     _stopping = false;
     await _bind();
